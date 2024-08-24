@@ -1,0 +1,24 @@
+
+<div class="newsList mb-5" routerLink="news-detail" (click)="onNewsClick(newsObj)"
+style="cursor: pointer;">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                 {{newsObj.title}}
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="newsContent">
+               <h3 class="m-0">
+                 <strong>PublishedAt :</strong>
+                 {{newsObj.publishedAt}}
+               </h3>
+               <h3 class="m-0">
+                 <strong>Author :</strong>
+                 {{newsObj.author || 'Unknown'}}
+               </h3>
+            </div>
+         </mat-card-content>
+    </mat-card>
+   
+</div>

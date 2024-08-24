@@ -1,0 +1,34 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+
+    .link {
+        margin: 0 5px;
+        text-transform: capitalize;
+    }
+}
+
+.country {
+    height: 20px;
+    border: red 1px solid;
+}
+
+.sidenav {
+    display: flex;
+    flex-direction: column;
+}
+
+@media(min-width:900px) {
+
+    .menuBtn,
+    mat-sidenav {
+        display: none;
+    }
+}
+
+@media(max-width:900px) {
+    .navLinks {
+        display: none;
+    }
+}

@@ -1,0 +1,77 @@
+
+
+
+
+
+<!-- {{articles | json}} -->
+
+<!-- <div class="row">
+   <div class="col-md-6 offset-md-3">
+    <div class="news-container">
+      <mat-form-field class="w-100">
+        <mat-label>Search</mat-label>
+        <input matInput [(ngModel)]="searchTerm" (ngModelChange)="onSearch($event)" placeholder="Search news...">
+      </mat-form-field>
+    
+      <mat-form-field class="w-100">
+        <mat-label>Country</mat-label>
+        <mat-select [(ngModel)]="selectedCountry" (ngModelChange)="onFilterChange()">
+          <mat-option *ngFor="let country of countries" [value]="country">{{ country }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    
+      <mat-form-field class="mr-5">
+        <mat-label>From Date</mat-label>
+        <input matInput [(ngModel)]="fromDate" (ngModelChange)="onFilterChange()" type="date">
+      </mat-form-field>
+    
+      <mat-form-field>
+        <mat-label>To Date</mat-label>
+        <input matInput [(ngModel)]="toDate" (ngModelChange)="onFilterChange()" type="date">
+      </mat-form-field>
+    </div>
+   </div>
+</div> -->
+
+<!-- <div class="row mb-5">
+    <div class="col-md-2 offset-md-5 mb-4" align="end">
+      <select class="form-control"
+      (change)="onCountryChange($event)">
+        <option value="all">all</option>
+        <option [value]="country" *ngFor="let country of countries">
+          {{country}}
+        </option>
+      </select>
+    </div>
+    <div class="col-md-6 offset-md-3">
+       <input type="text" [(ngModel)]="search" class="form-control" placeholder="Search...">
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col-md-6 offset-md-3"
+    *ngFor="let article of articles | filter : search : searchCountry" (click)="viewDetails(article)">
+        <div class="news-cards">
+            <mat-card>
+              <mat-card-header>
+                <mat-card-title>{{ article.title }}</mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                <div class="imgContainer mt-3 mb-3">
+                    <img mat-card-image [src]="article.urlToImage" 
+                    *ngIf="article.urlToImage ; else noimg" [alt]="article.title" [title]="article.title">
+                  </div>
+                <p> <strong>published At:</strong> {{ article.publishedAt }}</p>
+                <p><strong>Author:</strong> {{ article.author }}</p>
+                <p><a [href]="article.url"></a>Read More </p>
+              </mat-card-content>
+            </mat-card>
+          </div>
+    </div>
+</div>
+
+<ng-template #noimg>
+   <h2>No Image Available!!</h2>
+</ng-template> -->

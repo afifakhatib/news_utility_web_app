@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSelectChange } from '@angular/material/select';
-import { NewsService } from './shared/service/news.service';
+import { NewsService } from '../../service/news.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.scss']
 })
-export class AppComponent implements OnInit{
-  title = 'news_utility_web_app';
+export class NavbarComponent implements OnInit {
 
   countryArr: any[] = [
     {

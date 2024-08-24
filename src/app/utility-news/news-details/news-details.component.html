@@ -1,0 +1,36 @@
+<div class="single-news-container">
+    {{newsObj | json}}
+    <mat-card>
+        <mat-card-header class="my-2">
+            <mat-card-title>{{ newsObj }}</mat-card-title>
+            <mat-card-subtitle>Author : {{ newsObj.author || 'Unknown' }}</mat-card-subtitle>
+            <mat-card-subtitle>PublishedAt :{{ newsObj.publishedAt || 'Unknown' }}</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+            <div class="image">
+                <img *ngIf="newsObj.urlToImage; else noImg" [src]="newsObj.urlToImage" alt="Image">
+                <ng-template #noImg>
+                    <img src="https://placehold.co/400"
+                        alt="Image">
+                </ng-template>
+            </div>
+            <p>{{ newsObj.content }}</p>
+            <button mat-raised-button color="primary">
+                <a [href]="newsObj.url" target="_blank">
+                    Read More...
+                </a>
+            </button>
+        </mat-card-content>
+
+      
+    </mat-card>
+</div>
+
+<!-- <ng-template #noNews>
+    <p class="alert alert-danger">
+      no News 
+    </p>
+ </ng-template> -->
+
+<!-- https://placehold.co/400 -->
