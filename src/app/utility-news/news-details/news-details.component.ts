@@ -16,24 +16,12 @@ export class NewsDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    //  this.getNewsObj()
-    this._newsService.newsObjSubject$.subscribe(res => {
+    this._newsService.newsObjSubject$.subscribe((res : Inews) => {
       if(res){
        this.newsObj = res
-       console.log(res)
-       console.log(this.newsObj)
       }
   })
   }
 
-  // getNewsObj(){
-  //    this._newsService.newsObjSubject$.subscribe((res : Inews) => {
-  //        if(res){
-  //         this.newsObj = res
-  //         console.log(res)
-  //         console.log(this.newsObj)
-  //        }
-  //    })
-  // }
 
 }

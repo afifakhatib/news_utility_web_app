@@ -11,7 +11,7 @@
     <div class="col-md-6 col-sm-12 searchNews">
          <mat-form-field class="datePicker" appearance="fill">
             <input matInput type="text"
-            [matDatepicker]="startPicker" placeholder="Start Date"
+            [matDatepicker]="startPicker" placeholder="Start Date" (dateChange)="onDateChange()"
             [(ngModel)]="startDate">
             <mat-datepicker-toggle matSuffix [for]="startPicker"></mat-datepicker-toggle>
             <mat-datepicker #startPicker></mat-datepicker>
@@ -19,7 +19,7 @@
 
          <mat-form-field class="datePicker" appearance="fill">
             <input matInput type="text"
-            [matDatepicker]="endPicker" placeholder="End Date"
+            [matDatepicker]="endPicker" placeholder="End Date"  (dateChange)="onDateChange()"
             [(ngModel)]="endDate">
             <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
             <mat-datepicker #endPicker></mat-datepicker>
@@ -28,8 +28,17 @@
 </div>
 
 <div class="row">
-    <div class="col-md-6 offset-md-3">
+    <div class="col-md-4">
         <app-news-listing  [newsObj]="news"
-        *ngFor="let news of newsArr"></app-news-listing>
+        *ngFor="let news of newsArr | filter : searchVal | fromToDatePipe : startDate : endDate"></app-news-listing>
     </div>
+  <div class="col-md-8">
+     <router-outlet></router-outlet>
+  </div>
+
+    <!-- <div class="col-md-6 offset-md-3">
+        <app-news-listing  [newsObj]="news"
+        *ngFor="let news of newsArr | filter : searchVal | fromToDatePipe : startDate : endDate"></app-news-listing>
+    </div> -->
+
 </div>

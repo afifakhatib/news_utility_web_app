@@ -18,8 +18,8 @@ export class NewsListingComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onNewsClick(obj : Inews){
-     this._newsService.newsObjSubject$.next(obj)
+  onNewsClick(){
+     this._newsService.newsObjSubject$.next(this.newsObj)
     //  console.log(this.newsObj)
   }
 

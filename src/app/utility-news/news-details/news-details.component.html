@@ -1,8 +1,8 @@
 <div class="single-news-container">
-    {{newsObj | json}}
+    <!-- {{newsObj | json}} -->
     <mat-card>
         <mat-card-header class="my-2">
-            <mat-card-title>{{ newsObj }}</mat-card-title>
+            <mat-card-title>{{ newsObj.title }}</mat-card-title>
             <mat-card-subtitle>Author : {{ newsObj.author || 'Unknown' }}</mat-card-subtitle>
             <mat-card-subtitle>PublishedAt :{{ newsObj.publishedAt || 'Unknown' }}</mat-card-subtitle>
         </mat-card-header>
@@ -11,7 +11,7 @@
             <div class="image">
                 <img *ngIf="newsObj.urlToImage; else noImg" [src]="newsObj.urlToImage" alt="Image">
                 <ng-template #noImg>
-                    <img src="https://placehold.co/400"
+                    <img src=" https://reactjsexample.com/content/images/2021/11/Snipaste_2021-11-28_13-55-49.jpg"
                         alt="Image">
                 </ng-template>
             </div>

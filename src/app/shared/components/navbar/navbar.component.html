@@ -1,37 +1,7 @@
-<!-- 
-<mat-toolbar color="primary">
-    <div class="logo">
-        Angular
-    </div>
-    <button class="sideMenu" mat-icon-button (click)="sidenav.toggle()">
-        <mat-icon> {{!sidenav.opened?'menu' : 'close'}} </mat-icon>
-    </button>
-</mat-toolbar>
-
-<mat-sidenav-container>
-    <mat-sidenav mode="side" fixedInViewport="true" #sidenav>
-           <div class="sidenav m-2">
-              <button mat-button class="p-0 m-0" (click)="sidenav.close()">
-                   
-              </button>
-           </div>
-    </mat-sidenav>
-</mat-sidenav-container> -->
 
 <mat-toolbar class="navbar" color="primary">
-    <div class="logo">Angular</div>
+    <div class="logo" style="cursor: pointer;">News_App</div>
     <div class="navLinks">
-        <!-- <button mat-button class="p-0 m-0">
-            <mat-form-field>
-                <mat-label>Select Country</mat-label>
-                <mat-select [(value)]="selectedCountry" (selectionChange)="onChange($event)">
-                    <mat-option value="in">India</mat-option>
-                    <mat-option *ngFor="let country of countryArr" [value]="country.code">
-                        {{country.country}}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field>
-        </button> -->
     </div>
     <button class="menuBtn" mat-icon-button (click)="sidenav.toggle()">
         <mat-icon>{{ !sidenav.opened ? "menu" : "close" }}</mat-icon>

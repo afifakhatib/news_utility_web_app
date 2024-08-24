@@ -8,29 +8,35 @@ import { NewsDashboardComponent } from './utility-news/news-dashboard/news-dashb
 
 const routes: Routes = [
   {
-    path : '',
-    component : NewsDashboardComponent
+    path: '',
+    component: NewsDashboardComponent,
   },
   {
-    path : 'news',
-    component : NewsDashboardComponent
+    path: 'news',
+    component: NewsDashboardComponent,
+    children: [
+      {
+        path: ':news-detail',
+        component: NewsDetailsComponent,
+      },
+    ],
+  },
+  // {
+  //   path : 'news-detail',
+  //   component : NewsDetailsComponent
+  // },
+  {
+    path: 'page-not-found',
+    component: PageNotFoundComponent,
   },
   {
-    path : 'news-detail',
-    component : NewsDetailsComponent
+    path: '**',
+    redirectTo: 'page-not-found',
   },
-  {
-    path : 'page-not-found',
-    component : PageNotFoundComponent
-  },
-  {
-    path : '**',
-    redirectTo : 'page-not-found',
-  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
